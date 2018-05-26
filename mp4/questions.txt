@@ -1,0 +1,11 @@
+bot detection:
+if a user has two many comment in a short period of time and these comments
+are less than 10 words, then its a bot
+
+batch duration is the smallest unit of a spark context
+window length is how long the data and its value will be keep in the window, the whole window will be in memory
+slide interval is how long a window do the reduce
+
+dstream is a stream of data, is composed of series of rdds
+
+we enable checkpoint if we want reliable data storage of metadata and dstream lineage

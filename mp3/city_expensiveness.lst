@@ -1,0 +1,127 @@
+           *******************************************************
+                            Listing of SPARK Text
+                              Examiner GPL 2012
+             Copyright (C) 2012 Altran Praxis Limited, Bath, U.K.
+           *******************************************************
+
+
+                        DATE : 13-MAR-2018 20:47:29.45
+
+Line
+   1  from pyspark import SparkContext, SparkConf
+      ^1
+*** (  1)  Syntax Error      : No COMPILATION_UNIT can start with reserved word 
+           "FROM".
+--- (  2)  Warning           :430: SLI generation abandoned owing to syntax or 
+           semantic errors or multiple units in a single source file.
+
+   2  import argparse
+   3  import json
+   4  import re
+   5  def f(city):
+   6      # print (city)
+          ^3
+*** (  3)  Lexical Error     : Illegal token - Token ignored.
+
+   7      print(city)
+   8  
+   9  price = r'RestaurantsPriceRange2: [0-5]'
+  10  PRICE = re.compile(price)
+  11  def findprice(arr):
+  12      if arr == None:
+  13          return None
+  14      for v in arr:
+  15          if PRICE.match(v):
+  16              return PRICE.findall(v)[0][-1]
+  17      return None
+  18          
+  19  
+  20  
+  21  def find_city_expensiveness(sc, business_filename):
+  22      # file = open(business_filename)
+          ^4
+*** (  4)  Lexical Error     : Illegal token - Token ignored.
+
+  23      # lines = file.readlines()
+          ^5
+*** (  5)  Lexical Error     : Illegal token - Token ignored.
+
+  24      tx = sc.textFile(business_filename)
+  25      j = tx.map(lambda x:x.split('\n')).map(lambda x:(json.loads(x[0])['city']+', '+json.loads(x[0])['state'],\
+                                       ^6                                                                          ^7
+*** (  6)  Lexical Error     : Illegal token - Token ignored.
+*** (  7)  Lexical Error     : Illegal token - Token ignored.
+
+  26      (findprice(json.loads(x[0])['attributes']))))
+  27      j = j.filter(lambda x: x[1]!=None).map(lambda x: (x[0],(float(x[1]),1.0))).\
+                                     ^8                                              ^9
+*** (  8)  Lexical Error     : Illegal token - Token ignored.
+*** (  9)  Lexical Error     : Illegal token - Token ignored.
+
+  28      reduceByKey(lambda a,b :(a[0]+b[0],a[1]+b[1]))\
+                                                        ^10
+*** ( 10)  Lexical Error     : Illegal token - Token ignored.
+
+  29      .map(lambda x:(x[0],round(x[1][0]/x[1][1],2)))
+  30      
+  31      return j
+  32      # average = textfile.map(lambda line: json.load(line[4],line[5])).map(lambda city:(city))\
+          ^11                                                                                      ^12
+*** ( 11)  Lexical Error     : Illegal token - Token ignored.
+*** ( 12)  Lexical Error     : Illegal token - Token ignored.
+
+  33      #             .reduceByKey(lambda a,b:a+b)
+          ^13
+*** ( 13)  Lexical Error     : Illegal token - Token ignored.
+
+  34      # return (average.collect())
+          ^14
+*** ( 14)  Lexical Error     : Illegal token - Token ignored.
+
+  35      '''
+  36      Args:
+  37          sc: The Spark Context
+  38          business_filename: Filename of the Yelp businesses JSON file to use, where each line represents a business
+  39      Returns:
+  40          An RDD of tuples in the following format:
+  41              (CITY_STATE, AVERAGE_PRICE)
+  42              - CITY_STATE is in the format "CITY, STATE". i.e. "Urbana, IL"
+  43              - AVERAGE_PRICE should be a float rounded to 2 decimal places
+  44      '''
+  45  
+  46  if __name__ == '__main__':
+         ^15
+          ^16
+           ^17        ^18
+                       ^19
+                        ^20
+*** ( 15)  Lexical Error     : Illegal token - Token ignored.
+*** ( 16)  Lexical Error     : Illegal token - Token ignored.
+*** ( 17)  Lexical Error     : Illegal identifier - Identifier assumed.
+*** ( 18)  Lexical Error     : Illegal token - Token ignored.
+*** ( 19)  Lexical Error     : Illegal token - Token ignored.
+*** ( 20)  Lexical Error     : Illegal identifier - Identifier assumed.
+
+  47      # Get input/output files from user
+          ^21
+*** ( 21)  Lexical Error     : Illegal token - Token ignored.
+
+  48      parser = argparse.ArgumentParser()
+  49      parser.add_argument('input', help='File to load Yelp business data from')
+  50      parser.add_argument('output', help='File to save RDD to')
+  51      args = parser.parse_args()
+  52  
+  53      # Setup Spark
+          ^22
+*** ( 22)  Lexical Error     : Illegal token - Token ignored.
+
+  54      conf = SparkConf().setAppName("city_expensiveness")
+  55      sc = SparkContext(conf=conf)
+  56  
+  57      results = find_city_expensiveness(sc, args.input)
+  58      results.saveAsTextFile(args.output)
+
+Note: Flow analysis mode is automatic
+
+
+--End of file--------------------------------------------------

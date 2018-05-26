@@ -1,0 +1,4 @@
+animal;mammal;dog;olfaction
+animal;mammal;cat;olfaction
+animal;vertebrate;hagfish;<;mammal;dog;olfaction
+animal;vertebrate;central_nervous_system;spinal_canal;vertebra;mammal;fur;fox;carnivora;<;<;<;porcupine;mammal

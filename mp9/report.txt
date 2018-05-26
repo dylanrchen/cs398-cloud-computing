@@ -1,0 +1,24 @@
+1. edit app.py:
+    use re to compile the input string into a regular expression, and then use findall to get a list of matches, 
+    result += length of the list in each iteration 
+    Add cache:
+        define a global dictionary called cache, save the search result in the dict every time after search. If the search word is all already
+        in the cache, directly result the value.
+2.just build the docker following the two commands
+3. first,  start a project on GCP console, then do the commands in the terminal stated in the 
+    in the mp document. 
+    
+    Something else to do:  Put docker into sudo group and then log out and log in again, 
+    or cannot execute "gcloud docker push" 
+    
+    change deploy.yaml:   changed the image to gcr.io/cs398-mp9
+    also, change the API version in first line to be v1beta1
+
+    the output looks like:
+    NAME                                READY     STATUS              RESTARTS   AGE
+    nginx-deployment-55f76dbcb8-9p7k6   0/1       ContainerCreating   0          10s
+    nginx-deployment-55f76dbcb8-d4fkn   0/1       ContainerCreating   0          10s
+    nginx-deployment-55f76dbcb8-wtkz8   0/1       ContainerCreating   0          10s
+
+4. copy the code in the docker example, and then change the ip address, expose the external ip to
+local host 8080, and then I can access the web 

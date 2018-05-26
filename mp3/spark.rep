@@ -1,0 +1,130 @@
+           *******************************************************
+                         Report of SPARK Examination
+                              Examiner GPL 2012
+             Copyright (C) 2012 Altran Praxis Limited, Bath, U.K.
+           *******************************************************
+
+
+                        DATE : 13-MAR-2018 20:47:29.45
+
+Options:
+    noswitch
+    noindex_file
+    nowarning_file
+    notarget_compiler_data
+    noconfig_file
+    source_extension=ada
+    listing_extension=lst
+    nodictionary_file
+    report_file=spark.rep
+    nohtml
+    nostatistics
+    fdl_identifiers=accept
+    flow_analysis=auto
+    language=95
+    profile=sequential
+    annotation_character=#
+    rules=lazy
+    error_explanations=off
+    justification_option=full
+    output_directory=.
+    output_directory (actual)=/home/aligula/sp2018/398/mp3/
+
+Selected files:
+   city_expensiveness.py
+
+
+No Index files were used
+
+
+No Meta Files used
+
+
+Full warning reporting selected
+
+
+Source Filename(s) used were:
+   /home/aligula/sp2018/398/mp3/city_expensiveness.py
+
+
+
+Source Filename:   /home/aligula/sp2018/398/mp3/city_expensiveness.py
+Listing Filename:  /home/aligula/sp2018/398/mp3/city_expensiveness.lst
+
+***     No units in file
+
+
+22 error(s) or warning(s)
+
+Line
+   1  from pyspark import SparkContext, SparkConf
+      ^1
+*** (  1)  Syntax Error      : No COMPILATION_UNIT can start with reserved word 
+           "FROM".
+--- (  2)  Warning           :430: SLI generation abandoned owing to syntax or 
+           semantic errors or multiple units in a single source file.
+
+   6      # print (city)
+          ^3
+*** (  3)  Lexical Error     : Illegal token - Token ignored.
+
+  22      # file = open(business_filename)
+          ^4
+*** (  4)  Lexical Error     : Illegal token - Token ignored.
+
+  23      # lines = file.readlines()
+          ^5
+*** (  5)  Lexical Error     : Illegal token - Token ignored.
+
+  25      j = tx.map(lambda x:x.split('\n')).map(lambda x:(json.loads(x[0])['city']+', '+json.loads(x[0])['state'],\
+                                       ^6                                                                          ^7
+*** (  6)  Lexical Error     : Illegal token - Token ignored.
+*** (  7)  Lexical Error     : Illegal token - Token ignored.
+
+  27      j = j.filter(lambda x: x[1]!=None).map(lambda x: (x[0],(float(x[1]),1.0))).\
+                                     ^8                                              ^9
+*** (  8)  Lexical Error     : Illegal token - Token ignored.
+*** (  9)  Lexical Error     : Illegal token - Token ignored.
+
+  28      reduceByKey(lambda a,b :(a[0]+b[0],a[1]+b[1]))\
+                                                        ^10
+*** ( 10)  Lexical Error     : Illegal token - Token ignored.
+
+  32      # average = textfile.map(lambda line: json.load(line[4],line[5])).map(lambda city:(city))\
+          ^11                                                                                      ^12
+*** ( 11)  Lexical Error     : Illegal token - Token ignored.
+*** ( 12)  Lexical Error     : Illegal token - Token ignored.
+
+  33      #             .reduceByKey(lambda a,b:a+b)
+          ^13
+*** ( 13)  Lexical Error     : Illegal token - Token ignored.
+
+  34      # return (average.collect())
+          ^14
+*** ( 14)  Lexical Error     : Illegal token - Token ignored.
+
+  46  if __name__ == '__main__':
+         ^15
+          ^16
+           ^17        ^18
+                       ^19
+                        ^20
+*** ( 15)  Lexical Error     : Illegal token - Token ignored.
+*** ( 16)  Lexical Error     : Illegal token - Token ignored.
+*** ( 17)  Lexical Error     : Illegal identifier - Identifier assumed.
+*** ( 18)  Lexical Error     : Illegal token - Token ignored.
+*** ( 19)  Lexical Error     : Illegal token - Token ignored.
+*** ( 20)  Lexical Error     : Illegal identifier - Identifier assumed.
+
+  47      # Get input/output files from user
+          ^21
+*** ( 21)  Lexical Error     : Illegal token - Token ignored.
+
+  53      # Setup Spark
+          ^22
+*** ( 22)  Lexical Error     : Illegal token - Token ignored.
+
+Note: Automatic flow analysis mode selected
+
+
+--End of file--------------------------------------------------

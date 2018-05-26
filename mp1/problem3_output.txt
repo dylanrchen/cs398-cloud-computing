@@ -1,0 +1,13 @@
+"olfaction"	2
+"dog"	1
+"fox"	1
+"fur"	1
+"hagfish"	1
+"mammal"	4
+"porcupine"	1
+"spinal_canal"	1
+"vertebra"	1
+"vertebrate"	1
+"carnivora"	1
+"cat"	1
+"central_nervous_system"	1

@@ -1,0 +1,4 @@
+
+As there is more reducer, the total megabyte-milliseconds of bytes processed increase then decrease,eg 122296704 for 2 reducers,
+2607230976 for 5 reducers and 1872082944 for 15 reducers.Also the total time spent by all increase than decrease. 365982 for 2
+reducers, 848708 for 5 and 365982 for 15

@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: MyApp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9376
+  clusterIP: 10.11.240.2
+  loadBalancerIP: 78.11.24.19
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 146.148.47.155

@@ -1,0 +1,127 @@
+-------------------------------------------
+Time: 2018-02-21 23:46:10
+-------------------------------------------
+
+-------------------------------------------
+Time: 2018-02-21 23:46:10
+-------------------------------------------
+
+-------------------------------------------
+Time: 2018-02-21 23:46:20
+-------------------------------------------
+('r/AskReddit', ('zzufg', 'youtube', 'ya', 'za', 'yw', 'yes'))
+('r/gifs', ('z', 'yard'))
+('r/funny', ('youtube',))
+('r/news', ('years',))
+
+-------------------------------------------
+Time: 2018-02-21 23:46:20
+-------------------------------------------
+('r/AskReddit', ('zzufg', 'youtube', 'ya', 'za', 'yw', 'yes'))
+('r/gifs', ('z', 'yard'))
+('r/funny', ('youtube',))
+('r/news', ('years',))
+
+-------------------------------------------
+Time: 2018-02-21 23:46:30
+-------------------------------------------
+('r/aww', ('yard',))
+('r/AskReddit', ('za', 'yes', 'yw', 'zzufg', 'youtube'))
+('r/gifs', ('z', 'yard'))
+('r/funny', ('youtube',))
+('r/news', ('years',))
+
+-------------------------------------------
+Time: 2018-02-21 23:46:30
+-------------------------------------------
+('r/gifs', ('z', 'yard'))
+('r/AskReddit', ('za', 'yes', 'zzufg', 'youtube', 'yw'))
+('r/aww', ('yard',))
+('r/funny', ('youtube',))
+('r/news', ('years',))
+
+-------------------------------------------
+Time: 2018-02-21 23:46:40
+-------------------------------------------
+('r/AskReddit', ('years', 'yw', 'zzufg', 'youtube', 'za', 'yeller', 'yes'))
+('r/gifs', ('z',))
+('r/funny', ('youtube',))
+('r/videos', ('youtube',))
+
+-------------------------------------------
+Time: 2018-02-21 23:46:40
+-------------------------------------------
+('r/AskReddit', ('yw', 'yes', 'za', 'yeller', 'years', 'zzufg', 'youtube'))
+('r/gifs', ('z',))
+('r/funny', ('youtube',))
+('r/videos', ('youtube',))
+
+-------------------------------------------
+Time: 2018-02-21 23:46:50
+-------------------------------------------
+('r/todayilearned', ('yet',))
+('r/AskReddit', ('yw', 'zzufg', 'youtube', 'za', 'yes', 'zero'))
+('r/gifs', ('z',))
+('r/funny', ('youtube',))
+('r/videos', ('youtube',))
+
+-------------------------------------------
+Time: 2018-02-21 23:46:50
+-------------------------------------------
+('r/todayilearned', ('yet',))
+('r/AskReddit', ('yes', 'yw', 'zzufg', 'youtube', 'zero', 'za'))
+('r/gifs', ('z',))
+('r/funny', ('youtube',))
+('r/videos', ('youtube',))
+
+-------------------------------------------
+Time: 2018-02-21 23:47:00
+-------------------------------------------
+('r/dataisbeautiful', ('zero',))
+('r/AskReddit', ('zzufg', 'za', 'zero', 'yw', 'youtube'))
+('r/gifs', ('z',))
+('r/funny', ('youtube',))
+('r/videos', ('youtube',))
+('r/news', ('zealots',))
+
+-------------------------------------------
+Time: 2018-02-21 23:47:00
+-------------------------------------------
+('r/gifs', ('z',))
+('r/AskReddit', ('za', 'zero', 'yw', 'youtube', 'zzufg'))
+('r/dataisbeautiful', ('zero',))
+('r/funny', ('youtube',))
+('r/videos', ('youtube',))
+('r/news', ('zealots',))
+
+-------------------------------------------
+Time: 2018-02-21 23:47:10
+-------------------------------------------
+('r/dataisbeautiful', ('zero',))
+('r/AskReddit', ('za', 'zzufg', 'zero', 'yw', 'youtube'))
+('r/gifs', ('z',))
+('r/funny', ('youtube',))
+('r/videos', ('youtube',))
+('r/news', ('zealots',))
+
+-------------------------------------------
+Time: 2018-02-21 23:47:10
+-------------------------------------------
+('r/dataisbeautiful', ('zero',))
+('r/AskReddit', ('zzufg', 'zero', 'yw', 'youtube', 'za'))
+('r/gifs', ('z',))
+('r/funny', ('youtube',))
+('r/videos', ('youtube',))
+('r/news', ('zealots',))
+
+Traceback (most recent call last):
+  File "/mnt/user/rc5/rc5/mp4/subreddit_topics.py", line 106, in <module>
+    ssc.awaitTermination()
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/streaming/context.py", line 206, in awaitTermination
+  File "/usr/lib/spark/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py", line 1131, in __call__
+  File "/usr/lib/spark/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py", line 883, in send_command
+  File "/usr/lib/spark/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py", line 1028, in send_command
+  File "/usr/lib64/python3.4/socket.py", line 374, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/context.py", line 237, in signal_handler
+KeyboardInterrupt
